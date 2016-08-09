@@ -19,10 +19,17 @@ body
 	background-repeat: no-repeat;*/
 }
 
+/** 
+{
+	margin: 0px;
+	padding: 0px;
+}*/
+
 html body
 {
 	margin: 0px;
 	padding: 0px;
+	overflow: auto;
 }
 
 .edu
@@ -71,7 +78,8 @@ html body
 {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	font-family: cursive;	
+	font-family: cursive;
+	padding-top: 1px;	
 }
 
 @keyframes myanimation
@@ -89,6 +97,7 @@ html body
 {
 	max-height: 700px;
 	height: 650px;
+	overflow: auto;
 	animation-name: myanimation;
 	animation-duration: 20s;	
 	animation-fill-mode: initial;
@@ -139,7 +148,7 @@ html body
 {
 	display: table-cell;
 	position: relative;
-	left: -20%;
+	left: -5%;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-family: cursive;
@@ -155,22 +164,41 @@ html body
 	font-family: cursive;
 }
 
-#pump
+#pump 
 {
 	display: table-cell;
 	position: relative;
-	left: 20%;
+	left: 5%;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-family: cursive;
 }
 
+#opt 
+{
+	display: table-cell;
+	position: relative;
+	left: 10%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: cursive;
+}
 
+#dimen
+{
+	display: table-cell;
+	position: relative;
+	left: 15%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: cursive;
+}
 
 #coding
 {
 	display: table;
 	margin-top: 0px;
+	padding-top: 2px;
 }
 
 #matlab
