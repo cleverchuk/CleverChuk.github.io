@@ -95,8 +95,9 @@ html body
 
 .top
 {
-	max-height: 700px;
-	height: 650px;
+	max-height: 800px;
+	height: 700px;
+	margin: auto;
 	overflow: auto;
 	animation-name: myanimation;
 	animation-duration: 20s;	
