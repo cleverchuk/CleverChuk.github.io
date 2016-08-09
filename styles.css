@@ -17,6 +17,7 @@ body
 	/*background-image: url("images/usf.jpg");
 	background-position: 0% 50%;
 	background-repeat: no-repeat;*/
+	background-color: goldenrod;
 }
 
 /** 
@@ -47,9 +48,9 @@ html body
 {
 	align-content: center;
 	align : center;
-	margin-right: auto;
-	margin-left: auto;
-	background-color: lightgreen;
+	margin-right: 20px;
+	margin-left: 20px;
+	background-color: goldenrod;/* lightgreen;*/
 }
 
 .project > h3
@@ -97,6 +98,7 @@ html body
 {
 	max-height: 800px;
 	height: 700px;
+	size: relative;
 	margin: auto;
 	overflow: auto;
 	animation-name: myanimation;
