@@ -14,8 +14,26 @@ img
 
 body
 {
-	background-image: url("images/usf.jpg");
-	background-repeat: repeat;
+	/*background-image: url("images/usf.jpg");
+	background-position: 0% 50%;
+	background-repeat: no-repeat;*/
+}
+
+html body
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.edu
+{
+	font-family: cursive;
+}
+
+.edu h2
+{
+	font-size: 60px;
+	margin-bottom: 0px;
 }
 
 .project
@@ -30,6 +48,8 @@ body
 .project > h3
 {
 	font-family: cursive;
+	font-size: 60px;
+	margin-bottom: 0px;
 }
 
 .skill
@@ -68,7 +88,7 @@ body
 .top
 {
 	max-height: 700px;
-	height: 700px;
+	height: 650px;
 	animation-name: myanimation;
 	animation-duration: 20s;	
 	animation-fill-mode: initial;
@@ -181,6 +201,7 @@ body
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-family: cursive;
+
 }
 
 #c
