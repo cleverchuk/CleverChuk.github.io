@@ -12,20 +12,176 @@ img
 	display: block;
 }
 
-section
+.project
 {
 	align-content: center;
 	align : center;
 	margin-right: auto;
 	margin-left: auto;
-	width: 24em;
+	background-color: lightgreen;
 }
 
-body
+.project > h3
 {
-	background-color: skyblue;
-	/*background-image: url("images/usf.jpg");*/
-	background-repeat: no-repeat;
-	background-position: top right;
-	background-size: 200px
+	font-family: cursive;
+}
+
+.skill
+{
+	align-content: center;
+	background-color: goldenrod;
+	padding-top: 5px;
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+
+.skill > h1
+{
+	font-family: cursive;
+	margin-bottom: 0px;
+	font-size: 60px;	
+}
+.skill > h2
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: cursive;	
+}
+
+@keyframes myanimation
+{
+	0%{}
+	25%{}
+	50%{}
+	75%{}
+	100%{}
+} 
+
+#legend
+{
+	font-family: cursive;
+	font-weight: bold;
+}
+
+/*body
+{
+	background-color: gold;
+}*/
+
+.top
+{
+	background-color: green;
+	max-height: 700px;
+	height: 700px;
+}
+
+.top > h2
+{
+	position: relative;
+	top: 50%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 60px;
+	font-family: cursive;
+}
+
+.top p
+{
+	vertical-align: middle;
+	font-family: cursive;
+	margin-top: 0px;
+	position: relative;
+	top: 50%;
+}
+
+#btn
+{
+	border: ridge;
+	border-color: white;
+	position: relative;
+	top: 60%;
+}
+
+#cheme
+{
+	display: table;
+	margin-top: 0px;
+}
+
+#energy
+{
+	display: table-cell;
+	position: relative;
+	left: -20%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: cursive;
+}
+
+#vle
+{
+	display: table-cell;
+	position: relative;
+	left: 0%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: cursive;
+}
+
+#pump
+{
+	display: table-cell;
+	position: relative;
+	left: 20%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: cursive;
+}
+
+
+
+#coding
+{
+	display: table;
+	margin-top: 0px;
+}
+
+#matlab
+{
+	display: table-cell;
+	position: relative;
+	left: -20%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: cursive;
+}
+
+#python
+{
+	display: table-cell;
+	position: relative;
+	left: 0%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: cursive;
+}
+
+#cs
+{
+	display: table-cell;
+	position: relative;
+	left: 20%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: cursive;
+}
+
+#c
+{
+	display: table-cell;
+	position: relative;
+	left: 40%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: cursive;
 }
