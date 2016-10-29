@@ -12,18 +12,52 @@ img
 	display: block;
 }
 
+body
+{
+	/*background-image: url("images/usf.jpg");
+	background-position: 0% 50%;
+	background-repeat: no-repeat;*/
+	background-color: goldenrod;
+}
+
+/** 
+{
+	margin: 0px;
+	padding: 0px;
+}*/
+
+html body
+{
+	margin: 0px;
+	padding: 0px;
+	overflow: auto;
+}
+
+.edu
+{
+	font-family: cursive;
+}
+
+.edu h2
+{
+	font-size: 60px;
+	margin-bottom: 0px;
+}
+
 .project
 {
 	align-content: center;
 	align : center;
-	margin-right: auto;
-	margin-left: auto;
-	background-color: lightgreen;
+	margin-right: 20px;
+	margin-left: 20px;
+	background-color: goldenrod;/* lightgreen;*/
 }
 
 .project > h3
 {
 	font-family: cursive;
+	font-size: 60px;
+	margin-bottom: 0px;
 }
 
 .skill
@@ -45,34 +79,33 @@ img
 {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	font-family: cursive;	
+	font-family: cursive;
+	padding-top: 1px;	
 }
 
 @keyframes myanimation
 {
-	0%{}
-	25%{}
-	50%{}
-	75%{}
-	100%{}
+	10%{background-color: green;}
+	25%{background-color: gold;}
+	50%{background-color: goldenrod;}
+	75%{background-color: purple;}
+	100%{background-color: pink;}
 } 
 
-#legend
-{
-	font-family: cursive;
-	font-weight: bold;
-}
 
-/*body
-{
-	background-color: gold;
-}*/
 
 .top
 {
-	background-color: green;
-	max-height: 700px;
+	max-height: 800px;
 	height: 700px;
+	size: relative;
+	margin: auto;
+	overflow: auto;
+	animation-name: myanimation;
+	animation-duration: 20s;	
+	animation-fill-mode: initial;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
 }
 
 .top > h2
@@ -99,7 +132,13 @@ img
 	border: ridge;
 	border-color: white;
 	position: relative;
-	top: 60%;
+	top: 100%;
+}
+
+#legend
+{
+	font-family: cursive;
+	font-weight: bold;
 }
 
 #cheme
@@ -112,7 +151,7 @@ img
 {
 	display: table-cell;
 	position: relative;
-	left: -20%;
+	left: -5%;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-family: cursive;
@@ -128,22 +167,41 @@ img
 	font-family: cursive;
 }
 
-#pump
+#pump 
 {
 	display: table-cell;
 	position: relative;
-	left: 20%;
+	left: 5%;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-family: cursive;
 }
 
+#opt 
+{
+	display: table-cell;
+	position: relative;
+	left: 10%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: cursive;
+}
 
+#dimen
+{
+	display: table-cell;
+	position: relative;
+	left: 15%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: cursive;
+}
 
 #coding
 {
 	display: table;
 	margin-top: 0px;
+	padding-top: 2px;
 }
 
 #matlab
@@ -174,6 +232,7 @@ img
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-family: cursive;
+
 }
 
 #c
