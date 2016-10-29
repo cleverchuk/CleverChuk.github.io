@@ -4,8 +4,8 @@ th
 }
 img 
 {
-	max-width: 120px;
-	height: 120px;
+	max-width: 350px;
+	height: 300px;
 	border-radius: 50%;
 	margin-left: auto;
 	margin-right: auto;
@@ -106,14 +106,12 @@ html body
 	animation-fill-mode: initial;
 	animation-timing-function: ease;
 	animation-iteration-count: infinite;
+	position: relative;
 }
 
 .top > h2
 {
 	position: relative;
-	top: 50%;
-	margin-top: 0px;
-	margin-bottom: 0px;
 	font-size: 60px;
 	font-family: cursive;
 }
@@ -122,9 +120,8 @@ html body
 {
 	vertical-align: middle;
 	font-family: cursive;
-	margin-top: 0px;
 	position: relative;
-	top: 50%;
+
 }
 
 #btn
