@@ -242,8 +242,7 @@ html body
 	font-family: cursive;
 }
 
-#proj
+a:visited
 {
-	font-size: 80;
-	text-align: left;
+	color: green;
 }
