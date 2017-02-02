@@ -201,45 +201,9 @@ html body
 #coding
 {
 	display: flex;
-	margin-top: 0px;
+	margin:auto;
+	text-align:center;
 	padding-top: 2px;
-}
-
-#matlab
-{
-	display: table-cell;
-	position: relative;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	font-family: cursive;
-}
-
-#python
-{
-	display: table-cell;
-	position: relative;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	font-family: cursive;
-}
-
-#cs
-{
-	display: table-cell;
-	position: relative;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	font-family: cursive;
-
-}
-
-#c
-{
-	display: table-cell;
-	position: relative;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	font-family: cursive;
 }
 
 a:visited
