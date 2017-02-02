@@ -200,7 +200,7 @@ html body
 
 #coding
 {
-	display: flex;
+	display: none;
 	margin:auto;
 	text-align:center;
 	padding-top: 2px;
