@@ -154,7 +154,20 @@ p
 	font-family:cursive;
 }
 
-a:visited
-{
+a{
+	text-decoration: none;
+	text-anchor: middle;	
+	font-weight: bold;	
+	font-family:  "sans serif", "open sans","Times New Romans","cursive";
+}
+a:visited{
 	color: green;
+}
+li{
+	background-color: inherit;
+	float: left;
+	margin-left: 10%;
+}
+ul{
+	list-style: none;
 }
