@@ -217,9 +217,13 @@ ul{
 	padding-right: 90px;
 	font-weight: 800;
 }
-.progress > .progress-bar{
-	padding-left: 20px;
+@media screen and (min-width:800px) and (max-width:1900px){
+.progress > .progress-type{
+	padding-left: 130px;
 }
+
+}
+
 
 .soft-skills{
 	font-size: 20px;
