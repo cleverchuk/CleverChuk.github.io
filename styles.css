@@ -81,11 +81,11 @@ html body
 
 @keyframes myanimation
 {
-	10%{background-color: green;}
-	25%{background-color: gold;}
-	50%{background-color: goldenrod;}
-	75%{background-color: purple;}
-	100%{background-color: bisque;}
+	10%{background-color: green; color: white;}
+	25%{background-color: gold; color: white}
+	50%{background-color: goldenrod;color: black}
+	75%{background-color: purple; color: white}
+	100%{background-color: bisque; color: black}
 } 
 
 
