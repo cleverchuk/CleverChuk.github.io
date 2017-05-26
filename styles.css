@@ -87,7 +87,7 @@ html body
 @keyframes TextColor
 {
 	10%{color: white;}
-	25%{color: white}
+	25%{color: black}
 	50%{color: black}
 	75%{color: white}
 	100%{color: black}
