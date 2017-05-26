@@ -78,10 +78,9 @@ html body
 
 @keyframes myanimation
 {
-	10%{background-color: green;}
+	10%{background-color: gray;}
 	25%{background-color: gold;}
 	50%{background-color: goldenrod;}
-	75%{background-color: purple;}
 	100%{background-color: bisque;}
 } 
 @keyframes TextColor
@@ -118,9 +117,9 @@ html body
 .top:hover{
 	box-shadow: 0 8px 16px 0;
 }
-.top h6, .top p, .top h1{
-	animation: TextColor 20s both linear infinite;
-} 
+/*.top h6, .top p, .top h1{
+	animation: TextColor 19s both linear infinite;
+} */
 p
 {
 	text-align: justify;
