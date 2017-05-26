@@ -104,8 +104,8 @@ html body
 	overflow: auto;
 	animation-name: myanimation;
 	animation-duration: 20s;	
-	animation-fill-mode: initial;
-	animation-timing-function: ease;
+	animation-fill-mode: both;
+	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	position: relative;
 	box-shadow: 0 4px 8px 0;
