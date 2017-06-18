@@ -1,100 +1,14 @@
 
-th
-{
-	text-align: left;
-}
-img 
-{
-	width: 25%;
-	height: 1%;
-	border-radius: 30%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 15px;
-	display: block;
-}
 
-
-
-html body
+html , body
 {
 	margin: 0px;
 	padding: 0px;
 	overflow: auto;
-}
-
-.edu, a, h3, h1,p
-{
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
 }
 
-.edu h2
-{
-	text-align: center;
-	font-size: 60px;
-	margin-bottom: 0px;
-}
-
-/*.project
-{
-	align-content: center;
-	margin-right: 20px;
-	margin-left: 20px;
-	background-color: goldenrod;
-}*/
-
-.project > h3
-{
-	font-size: 60px;
-	margin-bottom: 0px;
-	text-align: center
-}
-
-.skill
-{
-	align-content: center;
-	background-color: goldenrod;
-	padding-top: 5px;
-	margin-top: 20px;
-	padding-bottom: 10px;
-}
-
-.skill > h1
-{
-	text-align: center;
-	margin-bottom: 0px;
-	font-size: 60px;	
-}
-.skill > h2
-{
-	text-align: center;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-top: 1px;	
-}
-
-@keyframes myanimation
-{
-	10%{background-color: gray;}
-	25%{background-color: gold;}
-	50%{background-color: goldenrod;}
-	100%{background-color: bisque;}
-} 
-@keyframes TextColor
-{
-	10%{color: white;}
-	25%{color: black}
-	50%{color: black}
-	75%{color: white}
-	100%{color: black}
-} 
-
-@media screen and (max-width: 500px){
-	.top{
-		width: 500px;
-		margin: auto;
-	}
-}
+/* HEader*/
 .top
 {
 	width: 100%;
@@ -114,14 +28,17 @@ html body
 .top:hover{
 	box-shadow: 0 8px 16px 0;
 }
-/*.top h6, .top p, .top h1{
-	animation: TextColor 19s both linear infinite;
-} */
-p
-{
-	text-align: justify;
-}
 
+img 
+{
+	width: 25%;
+	height: 1%;
+	border-radius: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 15px;
+	display: block;
+}
 
 
 a{
@@ -143,15 +60,7 @@ ul{
 }
 
 /*Styling BootStraps*/
-.row{
-	margin: 20px;
-	background-color: ghostwhite;
-	width: 100%;
-	height: 100%;
-}
-/*.row:hover{
-	
-}*/
+
 
 .navbar{
 	margin-bottom: 10px;
@@ -175,31 +84,70 @@ ul{
 .btn-sayhello:hover{
 	background-color: white;
 }
-/*.progress{
-	height: 9px;
-}
-.sTitle{
-	height: 9px;
-}*/
 
-.progress > .progress-type {
-	position: absolute;
-	left: 0px;
-	font-weight: 800;
-	padding-left: 90px;
+/*body*/
+
+.edu h2
+{
+	text-align: center;
+	font-size: 60px;
+	margin-bottom: 0px;
+}
+#skills{
+	background-color: #e8f5e9
+}
+
+#education{
+	background-color:#1976d2;
 	color: white;
 }
-.progress > .progress-completed {
-	position: absolute;
-	right: 0px;
-	padding-right: 90px;
-	font-weight: 800;
-}
-@media screen and (min-width:800px) and (max-width:1900px){
-.progress > .progress-type{
-	padding-left: 130px;
+
+#schoolProjects{
+	background-color: #69f0ae;
 }
 
+#schoolProjects a:visited{
+	color: #54565f;
+}
+#schoolProjects a{
+	color: white;
+}
+
+#personalProjects{
+	background-color: #f50057
+}
+#personalProjects a{
+	color: #ffffff
+}
+#personalProjects a:visited{
+	color: #000000
+}
+@keyframes myanimation
+{
+	10%{background-color: gray;}
+	25%{background-color: gold;}
+	50%{background-color: goldenrod;}
+	100%{background-color: bisque;}
+} 
+@keyframes TextColor
+{
+	10%{color: white;}
+	25%{color: black}
+	50%{color: black}
+	75%{color: white}
+	100%{color: black}
+} 
+
+@media screen and (max-width: 500px){
+	.top{
+		width: 500px;
+		margin: auto;
+	}
+}
+
+p
+{
+	text-align: justify;
 }
 
 
