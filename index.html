@@ -29,11 +29,11 @@
 
 
 	<nav class=" navbar pull-right">
-		<a href="#" class="btn">Skills</a>
+		<a href="#skills" class="btn">Skills</a>
 		<a href="#" class="btn">Expertise</a>
-		<a href="#" class="btn">Projects</a>
+		<a href="#schoolProjects" class="btn">Projects</a>
 		<a href="#" class="btn">Experience</a>
-		<a href="#" class="btn">Awards</a>
+		<a href="#education" class="btn">Awards</a>
 		<a href="https://github.com/CleverChuk" class="btn">Git</a>
 		<a href="#" class="btn-sayhello btn">Say Hello!</a>
 	</nav>
@@ -290,6 +290,27 @@
 
 		<!--</center> -->
 		</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script>
+//         $(document).ready(function (){
+//             $("#click").click(function (){
+//                 $('html, body').animate({
+//                     scrollTop: $("#div1").offset().top
+//                 }, 2000);
+//             });
+//         });
+	    
+	    $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});
+    </script>
 </body>
 
 </html>
