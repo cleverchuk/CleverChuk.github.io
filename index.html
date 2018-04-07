@@ -15,12 +15,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	    crossorigin="anonymous">
+	 crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-	    crossorigin="anonymous">
+	 crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	    crossorigin="anonymous"></script>
+	 crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="./styles.css">
 </head>
@@ -41,42 +41,170 @@
 </header>
 
 <body>
-		<center><h1>Under Reconstruction</h1></center>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-		<script>
-			$(document).ready(function () {
-				$("#ssk").click(function () {
-					$('html, body').animate({
-						scrollTop: $("#skills").offset().top
-					}, 1000);
-				});
-			});
+	<script>
+		var margin = { left: 100, top: 20, right: 100, bottom: 50 };
+		var body = document.body,
+			html = document.documentElement;
 
-			$(document).ready(function () {
-				$("#sps").click(function () {
-					$('html, body').animate({
-						scrollTop: $("#schoolProjects").offset().top
-					}, 1000);
-				});
-			});
+		var height = 550/*Math.max(body.scrollHeight, html.clientHeight)*/ -
+			margin.top - margin.bottom;
+		var width = 1200/*Math.max(body.clientWidth, html.clientWidth)*/ -
+			margin.left - margin.bottom;
 
-			$(document).ready(function () {
-				$("#edu").click(function () {
-					$('html, body').animate({
-						scrollTop: $("#education").offset().top
-					}, 1000);
-				});
-			});
+		var svg = d3.select("body").append("svg")
+			.attr({ "height": height + margin.top + margin.bottom, "width": width + margin.left + margin.right })
+			.append("g")
+			.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
 
-			$(document).ready(function () {
-				$("#awd").click(function () {
-					$('html, body').animate({
-						scrollTop: $("#awards").offset().top
-					}, 1000);
-				});
+		/*	svg.append("g")
+				.append("text")
+				.attr({
+					"font-family": "sans serif",
+					"font-size": 50
+				})
+				.on("mouseenter", function () {
+					d3.select(this).transition()
+						.attr({ "font-size": 12, "fill": "green" })
+						.delay(500)
+						.duration(2000)
+						.ease(d3.easeLinear)
+				})
+				.on("mouseout", function () {
+					d3.select(this).transition()
+						.attr({
+							"font-family": "sans serif",
+							"font-size": 50, "fill": "black"
+						})
+						.delay(500)
+						.duration(2000)
+						.ease(d3.easeLinear)
+				})
+				.style("text-anchor", "middle")
+				.text("REBOOTING ...");
+		*/
+
+		var endpoint = "https://data.cityofnewyork.us/resource/rvhx-8trz.json?$select=applicant_professional_title";
+		var pie = d3.layout.pie()
+			.sort(null)
+			.value(function (d) { return d.count });
+
+		var radius = Math.min(height, width) / 2
+		var arc = d3.svg.arc()
+			.innerRadius(0)
+			.outerRadius(radius - 10);
+
+		var color = d3.scale.ordinal()
+			.range(["#3366CC", "#F5F6CE", "#F2F2F2", "#00BFFF", "#3366CC", "#FF3300", "#CCFF33"]);//.range(["green", "blue", "sky blue", "orange", "gray", "beige"])
+
+		d3.json(endpoint, function (error, data) {
+			// data processing
+			firstPass = {}
+			firstPass["GEN CON"] = 0;
+			firstPass["DEMO CON"] = 0;
+			firstPass["H.O"] = 0;
+			var gcReg = /Gen|G.C|GC/i;
+			var demoReg = /dem/i, homeReg = /home|home owner|owner/i;
+			var totalRecords = data.length;
+			// data aggregation
+			data.forEach(function (d) {
+				d.applicant_professional_title = d.applicant_professional_title.toUpperCase();
+				if (gcReg.test(d.applicant_professional_title))
+					;
+				else if (demoReg.test(d.applicant_professional_title))
+					;
+				else if (homeReg.test(d.applicant_professional_title))
+					;
+				else
+					firstPass[d.applicant_professional_title] = 0;
+			})
+			data.forEach(function (d) {
+				if (gcReg.test(d.applicant_professional_title))
+					firstPass["GEN CON"] += 1;
+				else if (demoReg.test(d.applicant_professional_title))
+					firstPass["DEMO CON"] += 1;
+				else if (homeReg.test(d.applicant_professional_title))
+					firstPass["H.O"] += 1;
+				else
+					firstPass[d.applicant_professional_title] += 1;
+			})
+			// data transformation
+			var keys = Object.keys(firstPass);
+			color.domain(keys)
+			data = keys.map(function (key) {
+				return { profession: key, count: firstPass[key] }
+			})
+			// Filter professions with counts less or equal to 20
+			const reducer = (accumulator, currentValue) => accumulator + currentValue.count;
+			var count = data.filter(d => d.count <= 20).reduce(reducer, 0);
+			data = data.filter(d => d.count > 20);
+			data.push({ profession: "OTHERS", count: count });
+
+			// Plotting
+			var g = svg.selectAll("arc")
+				.data(pie(data))
+				.enter().append("g")
+				.attr("class", "arc");
+
+			// draw section
+			g.append("path")
+				.attr("d", arc)
+				.style("fill", function (d) { return color(d.data.profession); });
+
+			// draw section title
+			g.append("text")
+				.attr({
+					"dy": "0.6em",
+					"transform": function (d) { return "translate(" + arc.centroid(d) + ")"; }
+				})
+				.style("text-anchor", "middle")
+				.text(function (d) { return d.data.profession + ", " + (d.data.count / totalRecords); });
+
+			// draw figure title
+			g.append("text")
+				.attr({
+					"dy": "0.71em",
+					"transform": "translate(0," + height / 1.9 + ")"
+				})
+				.style("text-anchor", "middle")
+				.text("Figure: Proportion of Professionals applying for Job in New York");
+		});
+
+		// Jquery scripts
+		$(document).ready(function () {
+			$("#ssk").click(function () {
+				$('html, body').animate({
+					scrollTop: $("#skills").offset().top
+				}, 1000);
 			});
-		</script>
+		});
+
+		$(document).ready(function () {
+			$("#sps").click(function () {
+				$('html, body').animate({
+					scrollTop: $("#schoolProjects").offset().top
+				}, 1000);
+			});
+		});
+
+		$(document).ready(function () {
+			$("#edu").click(function () {
+				$('html, body').animate({
+					scrollTop: $("#education").offset().top
+				}, 1000);
+			});
+		});
+
+		$(document).ready(function () {
+			$("#awd").click(function () {
+				$('html, body').animate({
+					scrollTop: $("#awards").offset().top
+				}, 1000);
+			});
+		});
+	</script>
+
 </body>
 
 </html>
