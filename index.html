@@ -41,7 +41,7 @@
 </header>
 
 <body>
-	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
 
 	<script>
 		var margin = { left: 100, top: 20, right: 100, bottom: 50 };
@@ -145,7 +145,23 @@
 			var g = svg.selectAll("arc")
 				.data(pie(data))
 				.enter().append("g")
-				.attr("class", "arc");
+				.attr("class", "arc")
+				.on("mouseenter", function (d, i) {
+					var xy = arc.centroid(d);
+					d3.select(this).transition()
+						.duration(500)
+						.attr({ "transform": "translate(" + xy[0] / 5 + "," + xy[1] / 5 + ")" })
+						.ease(d3.easeLinear);
+
+
+				})
+				.on("mouseout", function (d, i) {
+					var xy = arc.centroid(d);
+					d3.select(this).transition()
+						.duration(500)
+						.attr({ "transform": "translate(0,0)" })
+						.ease(d3.easeLinear);
+				});
 
 			// draw section
 			g.append("path")
@@ -162,7 +178,7 @@
 				.text(function (d) { return d.data.profession + ", " + (d.data.count / totalRecords); });
 
 			// draw figure title
-			g.append("text")
+			svg.append("text")
 				.attr({
 					"dy": "0.71em",
 					"transform": "translate(0," + height / 1.9 + ")"
