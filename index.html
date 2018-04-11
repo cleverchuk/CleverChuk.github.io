@@ -100,10 +100,16 @@
 
 		d3.json(endpoint, function (error, data) {
 			// data processing
-			firstPass = {}
-			firstPass["GEN CON"] = 0;
-			firstPass["DEMO CON"] = 0;
-			firstPass["H.O"] = 0;
+			var legend = {
+				"GC": "General Contractor",
+				"DC": "Demolition Contractor",
+				"HO": "Home Owner"
+			}
+
+			var firstPass = {}
+			firstPass["GC"] = 0;
+			firstPass["DC"] = 0;
+			firstPass["HO"] = 0;
 			var gcReg = /Gen|G.C|GC/i;
 			var demoReg = /dem/i, homeReg = /home|home owner|owner/i;
 			var totalRecords = data.length;
@@ -121,11 +127,11 @@
 			})
 			data.forEach(function (d) {
 				if (gcReg.test(d.applicant_professional_title))
-					firstPass["GEN CON"] += 1;
+					firstPass["GC"] += 1;
 				else if (demoReg.test(d.applicant_professional_title))
-					firstPass["DEMO CON"] += 1;
+					firstPass["DC"] += 1;
 				else if (homeReg.test(d.applicant_professional_title))
-					firstPass["H.O"] += 1;
+					firstPass["HO"] += 1;
 				else
 					firstPass[d.applicant_professional_title] += 1;
 			})
