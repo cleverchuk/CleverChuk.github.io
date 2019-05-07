@@ -13,33 +13,31 @@
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	    crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-	    crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	    crossorigin="anonymous"></script>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="./styles.css">
 </head>
 
 <header>
 
 
-	<nav class=" navbar pull-right">
+	<nav class="navbar pull-left">
 		<a id="ssk" href="#" class="btn">Skills</a>
 		<a id="exp" href="#" class="btn">Expertise</a>
-		<a id="sps" href="#" class="btn">Projects</a>
-		<a id="xpr" href="#" class="btn">Experience</a>
+		<a id="sps" href="#" class="btn">School Projects</a>
+		<a id="pps" href="#" class="btn">Personal Projects</a>
+		<a id="xpr" href="#" class="btn">experience</a>
 		<a id="edu" href="#" class="btn">Awards</a>
 		<a href="https://github.com/CleverChuk" class="btn">Git</a>
 		<a id="sayHello" href="#" class="btn-sayhello btn">Say Hello!</a>
 	</nav>
 	<div class="container">
 
-		<div class="row top">
+		<div class="row header">
 			<div class="col-md-6 col-sm-6 col-lg-6">
 				<img class="pull-left" src="./images/snapPhoto2.png" alt="ME">
 			</div>
@@ -47,22 +45,29 @@
 				<h6>Hello! I am...</h6>
 				<h1>Chukwubuikem Ume-Ugwa</h1>
 				<p>
-					I am an Engineer. I graduated Magna Cum Laude with a B.Sc in Chemical Engineering. I am currently enrolled as a degree seeking
-					student at my Alma mater for Computer Science. I am absolutely not getting another bachelors. I am just taking class to ready myself
-					for an advance degree in computer science. 
-					
-					<br/><br/><br/>
-					My story is pretty unique. I taught myself how to code while I was working on my B.Sc in Chemical Engineering.
-					I learned from watching youtube videos, taking courses on Cousera, Edx and reading books. I am passionate about computer science 
-					and problem solving. I believe that knowing how to program a Computer and write software will make me the engineer of the 21st 
-					century(in my mind, please don't piss on that idea (; ). Besides that, <strong>I love the art of Software creation.</strong>
+					I am an Engineer. I graduated Magna Cum Laude with a B.Sc in Chemical Engineering. I am currently
+					enrolled as a degree seeking
+					student at my Alma mater for Computer Science. I am absolutely not getting another bachelors. I am
+					just taking class to ready myself
+					for an advance degree in computer science.
 
-					<br/>
-					<br/><br/>
-					I interned at the Institute for computational engineering and sciences at the University of Texas in Austin.
-					I worked on simulating and visualizing <a href="https://cleverchuk.github.io/ices/">nanoparticle sintering</a>. That's some spiel!
+					<br /><br />
+					My story is pretty unique. I taught myself how to code while I was working on my B.Sc in Chemical
+					Engineering.
+					I learned from watching youtube videos, taking courses on Cousera, Edx and reading books. I am
+					passionate about computer science
+					and problem solving. I believe that knowing how to program a Computer and write software will make
+					me the engineer of the 21st
+					century(in my mind, please don't piss on that idea (; ). Besides that, <strong>I love the art of
+						Software creation.</strong>
+
+					<br /><br />
+					I interned at the Institute for computational engineering and sciences at the University of Texas in
+					Austin.
+					I worked on simulating and visualizing <a href="https://cleverchuk.github.io/ices/">nanoparticle
+						sintering</a>. That's some spiel!
 				</p>
-				<a class="btn btn-sm" href="#">Download Resume &nbsp;
+				<a class="btn btn-sm" href="mailto:cleverchuk@gmail.com" style="margin-bottom:2%">Request Resume &nbsp;
 					<span class="glyphicon glyphicon-download"></span>
 				</a>
 			</div>
@@ -71,19 +76,18 @@
 </header>
 
 <body>
+	<button onclick="topFunction()" id="scroll_top_btn" title="Go to top">Top</button>
 	<!--<center>-->
 	<!-- Begin id info -->
 	<div class="container">
-
-
 		<!-- End id info -->
 
 		<!-- Begin Skills -->
-		<section id="skills">
+		<section class="card" id="skills">
 			<div class="container">
 				<h2>What can I do?</h2>
 				<div class="row skill">
-					<div class="col-sm-4">
+					<div class="col-sm-5">
 						<h3>ChemE Skills</h3>
 						<ul class="subskills">
 							<li>
@@ -100,12 +104,10 @@
 							</li>
 							<li>
 								<span>Risk analysis and Optimization</span>
-								<strong>Monte Carlo simulation, MiniMax, Linear Programming, Golden section search</strong>
+								<strong>Monte Carlo simulation, MiniMax, Linear Programming, Golden section
+									search</strong>
 							</li>
 						</ul>
-					</div>
-					<div class="col-sm-1 hidden-xs curly">
-						<!--<span>}</span>-->
 					</div>
 					<div class="col-sm-7">
 						<h2>I can</h2>
@@ -127,8 +129,8 @@
 				</div>
 
 				<div class="row skill">
-					<div class="col-sm-4">
-						<h3>Coding Skills</h3>
+					<div class="col-sm-5">
+						<h3>Computer Science Skills</h3>
 						<ul class="subskills">
 							<li>
 								<span>Front-end development</span>
@@ -137,16 +139,13 @@
 
 							<li>
 								<span>Software Development</span>
-								<strong>C, C++, Java, Python &amp; C#</strong>
+								<strong>Advanced(C/C++, Java, Python) &amp; C#</strong>
 							</li>
 							<li>
 								<span>Mobile Development</span>
-								<strong>Android &amp; UWP</strong>
+								<strong>Advanced(Android) &amp; UWP</strong>
 							</li>
 						</ul>
-					</div>
-					<div class="col-sm-1 hidden-xs curly">
-						<!--<span>}</span>-->
 					</div>
 					<div class="col-sm-7">
 						<h2>I can</h2>
@@ -160,27 +159,32 @@
 							<li>Design a
 								<strong>static and responsive webpage</strong>.</li>
 							<li>Write
+								<strong>Server side code(Django, JSP)</strong>.</li>
+							<li>Write
 								<strong>client-side scripts</strong>.</li>
 						</ul>
 					</div>
 				</div>
 				<div class="row skill">
-					<div class="col-sm-4">
+					<div class="col-sm-5">
 						<h2> Other Skills</h2>
 						<ul class="subskills">
 							<li>
-								<span>Communication</span>
+								<span>Algorithms</span>
 							</li>
 							<li>
-								<span>Team Player </span>
+								<span>Data Structure</span>
+							</li>
+							<li>
+								<span>OOP</span>
+							</li>
+							<li>
+								<span>Communication</span>
 							</li>
 							<li>
 								<span>Team Leader</span>
 							</li>
 						</ul>
-					</div>
-					<div class="col-sm-1 hidden-xs curly">
-						<!--<span>}</span>-->
 					</div>
 					<div class="col-sm-7">
 						<h2>I can</h2>
@@ -196,7 +200,7 @@
 		<!-- End Skills -->
 
 		<!-- Begin Education -->
-		<section id="education">
+		<section class="card" id="education">
 			<div class="container">
 				<div class="row edu">
 					<div class="col-md-12">
@@ -219,16 +223,71 @@
 				</div>
 		</section>
 
-		<section id="schoolProjects">
+		<section class="card" id="school_projects">
 			<div class="container">
-				<h2>Projects</h2>
+				<h2>School Projects</h2>
 				<div class="row project">
 					<div class="col-sm-6">
-						<h4>1. Control System for an Industrial Digester</h4>
+						<h4>0. Arithmetic Unit and Right-Shift Register </h4>
 						<p>
-							A feedback and feed-forward control system designed to keep an industrial disgester within an environmental constraints of
+							Designed and built a 4-bit arithmetic unit that is capable of performing addition,
+							subtraction,
+							increment and decrement operations and 4-bit right-shift register.
+
+
+							<br />
+							<h5>Role:</h5> &nbsp;&nbsp;&nbsp;&nbsp;Project Leader
+
+							<h5>Tools used:</h5>
+							<ol>
+								<li style="float:none">2x AND chips</li>
+								<li style="float:none">1x 4-bit full adder</li>
+								<li style="float:none">1x OR chip</li>
+								<li style="float:none">1x inverter chip</li>
+								<li style="float:none">Power source</li>
+								<li style="float:none">LEDS</li>
+
+							</ol>
+							<a class="btn" href="#">Download Report &nbsp;
+								<span class="glyphicon glyphicon-download"></span>
+							</a>
+						</p>
+					</div>
+
+					<div class="col-sm-6">
+						<h4>1. Elevator Control System</h4>
+						<p>
+							Designed and built build a finite state machine capable of controlling the operation of an
+							elevator in a 2-story
+							building.
+							<br />
+							<h5>Role:</h5> &nbsp;&nbsp;&nbsp;&nbsp;Project Leader
+
+							<h5>Tools used:</h5>
+							<ol>
+								<li style="float:none">2x AND chips</li>
+								<li style="float:none">1x 74LS163 chip</li>
+								<li style="float:none">1x OR chip</li>
+								<li style="float:none">1x inverter chip</li>
+								<li style="float:none">Power source</li>
+								<li>2 JK’ flip-flops</li>
+								<li style="float:none">LEDS</li>
+
+							</ol>
+							<a class="btn" href="#">Download Report &nbsp;
+								<span class="glyphicon glyphicon-download"></span>
+							</a>
+						</p>
+					</div>
+				</div>
+				<div class="row project">
+					<div class="col-sm-6">
+						<h4>2. Control System for an Industrial Digester</h4>
+						<p>
+							A feedback and feed-forward control system designed to keep an industrial disgester within
+							an environmental constraints of
 							75mgTOC/L.
-							<br/>
+							<br />
 							<h5>Role:</h5> &nbsp;&nbsp;&nbsp;&nbsp;Project Leader
 
 							<h5>Tools used:</h5>
@@ -243,11 +302,11 @@
 					</div>
 
 					<div class="col-sm-6">
-						<h4>2. Self-Heating Mosquito Repellent Device</h4>
+						<h4>3. Self-Heating Mosquito Repellent Device</h4>
 						<p>
 							A repellent dispersion system that uses an exothermic reaction to aid diffusion
 							<br>of repellent.
-							<br/>
+							<br />
 							<h5>Role:</h5> &nbsp;&nbsp;&nbsp;&nbsp;Project Leader
 							<h5>Tools used</h5>
 							<ol>
@@ -265,10 +324,11 @@
 
 				<div class="row project">
 					<div class="col-sm-6">
-						<h4>3. Chemical Vapor Deposition reactor</h4>
+						<h4>4. Chemical Vapor Deposition reactor</h4>
 						<p>
-							A chemical vapor deposition reactor used for the production of microeletronic chips with a 75% conversion of limiting reagent.
-							<br/>
+							A chemical vapor deposition reactor used for the production of microeletronic chips with a
+							75% conversion of limiting reagent.
+							<br />
 							<h5>Role:</h5> &nbsp;&nbsp;&nbsp;&nbsp;Project Leader
 							<h5>Tools used:</h5>
 							<ol>
@@ -280,10 +340,10 @@
 						</p>
 					</div>
 					<div class="col-sm-6">
-						<h4>4. Ball Valve</h4>
+						<h4>5. Ball Valve</h4>
 						<p>
 							A valve use to regulate fluid flow.
-							<br/>
+							<br />
 							<h5>Role:</h5> &nbsp;&nbsp;&nbsp;&nbsp;Project Leader
 							<h5>Tools used:</h5>
 							<ol>
@@ -300,16 +360,101 @@
 			</div>
 
 		</section>
-
-
 		<!-- End Education -->
 
+		<!-- Begin experience -->
+		<section class="card" id="experience">
+			<div class="container">
+				<h2>Experiences</h2>
+				<div class="row reu">
+					<div class="col-sm-8">
+						<strong>University of South Florida – </strong> REU
+						<ul>
+							<li>Building a web-based visualization tool using Python, JavaScript, and HTML/CSS.</li>
+							<li>Developing REST API for data visualization engine and building visualization engine
+								backend. </li>
+						</ul>
+					</div>
+
+					<div class="col-sm-4">
+						<p>Tampa, FL | August 2018 - present</p>
+					</div>
+
+				</div>
+				<div class="row jpmc">
+					<div class="col-sm-8">
+						<strong>J.P Morgan Chase, Card Services – </strong> Software Engineering Intern
+						<ul>
+							<li></li>
+							<li> </li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+
+					<div class="col-sm-4">
+						<p>Tampa, FL | June 2019 - August 2019</p>
+					</div>
+				</div>
+
+				<div class="row fs">
+					<div class="col-sm-8">
+						<strong>Formulated Solutions – </strong>Operations Engineering Intern
+						<ul>
+							<li>Completing data mining, data collection, and data analysis for Operational Excellence
+								cost savings and process improvement projects. </li>
+							<li>Developing ladder logic for automation using Allen Bradley PLCs. </li>
+							<li>Standardizing equipment setup and operating parameters.</li>
+						</ul>
+					</div>
+
+					<div class="col-sm-4">
+						<p>Largo, FL | Feb 2019 – May 2019</p>
+					</div>
+				</div>
+
+				<div class="row ap">
+					<div class="col-sm-8">
+						<strong>Air Products and Chemical Inc. – </strong>Summer IT Specialist, Cloud Architect
+						<ul>
+							<li>Conducted a proof of concept for Cloud Foundry in line with company’s cloud migration
+								effort.</li>
+							<li>Deployed NodeJS and ASP.NET applications using Docker Images. </li>
+							<li>Outlined case by case cloud disaster recovery strategies.</li>
+							<li>Authored 5 documentation WIKIs and 1 PowerShell script to automate resource deployment
+								on Azure.</li>
+						</ul>
+					</div>
+
+					<div class="col-sm-4">
+						<p>Allentown, PA | May 2018 - August 2018</p>
+					</div>
+				</div>
+
+				<div class="row ut">
+					<div class="col-sm-8">
+						<strong>Institute for Computational Engineering and Science, UT -</strong> Summer Intern
+						<ul>
+							<li>Created a 3D time series visualization of nanoparticle sintering with Python.</li>
+							<li>Developed a web page presentation with HTML, CSS, and JavaScript </li>
+							<li>Developed a program for running simulation on supercomputer using C/C++.</li>
+						</ul>
+					</div>
+
+					<div class="col-sm-4">
+						<p>Austin, TX | June 2017 - August 2017</p>
+					</div>
+				</div>
+		</section>
+		<!--End experience  -->
+
+
 		<!-- Begin Funstuff -->
-		<section id="personalProjects">
+		<section class="card" id="personal_projects">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<h3>My Works</h3>
+						<h3>Personal Projects</h3>
 						<ol>
 							<li>
 								<a id="da" href="./reports/exploratoryDataAnalysis.html">Data Analytics</a>
@@ -330,48 +475,19 @@
 					</div>
 					<!-- <input type="image" id="fb" src="./images/facebook.png" onClick="location.href='https://cleverchuk.github.io/'"/> -->
 				</div>
-				<!--End Funstuff  -->
+
 			</div>
 
 		</section>
+		<!--End Funstuff  -->
 
 		<!--</center> -->
-		</div>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-		<script>
-			$(document).ready(function () {
-				$("#ssk").click(function () {
-					$('html, body').animate({
-						scrollTop: $("#skills").offset().top
-					}, 1000);
-				});
-			});
-
-			$(document).ready(function () {
-				$("#sps").click(function () {
-					$('html, body').animate({
-						scrollTop: $("#schoolProjects").offset().top
-					}, 1000);
-				});
-			});
-
-			$(document).ready(function () {
-				$("#edu").click(function () {
-					$('html, body').animate({
-						scrollTop: $("#education").offset().top
-					}, 1000);
-				});
-			});
-
-			$(document).ready(function () {
-				$("#awd").click(function () {
-					$('html, body').animate({
-						scrollTop: $("#awards").offset().top
-					}, 1000);
-				});
-			});
-		</script>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<script src="./main.js"></script>
 </body>
 
 </html>
