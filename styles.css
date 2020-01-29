@@ -29,7 +29,9 @@ html , body
 	background-color: #555;
 }
 
-
+p{
+	font-size: 1.5em;
+}
 .me
 {
 	transform: rotate(90deg);
@@ -37,7 +39,7 @@ html , body
 }
 
 .separator{
-	margin-top: 80px
+	margin-top: 70px
 }
 
 .flex-container{
@@ -46,5 +48,5 @@ html , body
 }
 
 .role{
-	text-align: justify
+	text-align: left
 }
