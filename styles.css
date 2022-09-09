@@ -1,11 +1,10 @@
-
-
-html , body
-{
+html,
+body {
 	margin: 0px;
 	padding: 0px;
 	overflow: auto;
-	font-family: Arial, Helvetica, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+	font-family: open sans, monospace, Raleway, roboto, lato;
+	font-weight: 500;
 	text-align: center
 }
 
@@ -23,33 +22,32 @@ html , body
 	cursor: pointer;
 	padding: 15px;
 	border-radius: 4px;
-  }
-  
+}
+
 #scroll_top_btn:hover {
 	background-color: #555;
 }
 
-p{
+p {
 	font-size: 1.5em;
 }
 
-.me
-{
+.me {
 	object-fit: contain;
 	width: 350px;
 	height: 350px;
 	border-radius: 50%;
 }
 
-.separator{
+.separator {
 	margin-top: 70px
 }
 
-.flex-container{
-	display:flex; 
+.flex-container {
+	display: flex;
 	justify-content: space-around;
 }
 
-.role{
+.role {
 	text-align: left
 }
